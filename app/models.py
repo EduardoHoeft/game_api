@@ -24,14 +24,12 @@ class Player(db.Model):
     name = db.Column(db.String, index=True, unique=True)
     email = db.Column(db.String, index=True, unique=True)
     senha = db.Column(db.String, index=True) # verificar no git bruno
-    initial_time = db.Column(db.Time, index=True)
-    end_time = db.Column(db.time, index=True)
+    game_time = db.Column(db.Time, index=True)
 
     def to_dict(self):
         return {
             'id': self.id,
             'name': self.name,
             'email': self.email,
-            'initial_time': self.initial_time,
-            'end_time': self.end_time
+            'game_time': self.game_time
         }

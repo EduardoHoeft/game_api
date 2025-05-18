@@ -11,7 +11,7 @@ app = create_app()
 #Utilizaremos o comando "flask run" para rodar a aplicação
 @app.shell_context_processor
 def make_shell_context():
-    #Retorna um dicionário com as chaves 'db' e 'Cliente', para que a instância db e o modelo Cliente disponíveis no shell
+    #Retorna um dicionário com as chaves 'db' e 'Cliente' e o 'player', para que a instância db e o modelo Cliente disponíveis no shell
     return {'db': db, 'Client': Client,
             'db': db, 'Player': Player
             }

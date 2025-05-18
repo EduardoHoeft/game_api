@@ -47,8 +47,7 @@ def create_player(current_user):
             name=data['name'],
             email=data['email'],
             senha_hash=hashed_password,
-            initial_time=data.get('initial_time'),
-            end_time=data.get('end_time')
+            game_time=data.get('game_time')
         )
         db.session.add(player)
         db.session.commit()
