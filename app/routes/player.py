@@ -29,6 +29,7 @@ def get_players(current_user):
 @bp.route('/players', methods=['POST'])
 @token_required
 def create_player(current_user):
+    
     try:
         data = request.get_json() or {} #recupera em json, ou aceita o que está sendo enviado
         if 'name' not in data or 'email' not in data:
