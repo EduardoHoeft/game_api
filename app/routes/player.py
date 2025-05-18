@@ -117,7 +117,7 @@ def delete_cliente(current_user, id):
         player = Player.query.get_or_404(id)
         db.session.delete(player)
         db.session.commit()
-        return jsonify({'message': 'Sucesso delete client'}), 204
+        return jsonify({'message': 'Sucesso delete player'}), 204
     except Exception as e:
         return jsonify({'error': str(e)}), 500
 
